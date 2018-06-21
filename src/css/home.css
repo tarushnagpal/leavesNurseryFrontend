@@ -1,0 +1,131 @@
+.home-container {
+    padding: 2em 3em;
+    margin-bottom: 4em;
+    min-height: 100%;
+    background: white;
+}
+.caro-img {
+    width: 100%;
+    height: auto;
+}
+.about-us h4 {
+    font-weight: 600;
+    border-bottom: solid 1px black;
+    margin-bottom: 1em;
+    line-height: 3em;
+}
+.about-us {
+    font-size: 16px;
+    background: #CCFCBE;
+    padding: 0.5em 2em;
+}
+.left-container {
+    padding: 0;
+}
+.right-container {
+    padding: 0.5em 4em;
+    padding-right: 0;
+}
+@media screen and (max-width: 768px) {
+    .right-container {
+        padding: 0.5em 0;
+    }
+    .fa-icons {
+        font-size: 2em !important;
+    }
+    .fa-icon-title {
+        font-size: 2em !important;
+    }
+    .home-container {
+        padding: 2em 1em;
+    }
+}
+.right-container h4 {
+    font-weight: 400 !important ;
+}
+.after-caro {
+    margin-top: 2em;
+}
+.right-title {
+    display: table;
+    border-bottom: solid 1px black;
+}
+.right-title .coloumn {
+    display: table-cell;
+    width: 50%;
+}
+.fa-icons {
+    /* display: inline-block; */
+    font-size: 3em;
+}
+.fa-icon {
+    padding-left: 0.5em;
+}
+.plants-container {
+    margin-top: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.8em;
+    padding-left: 0.2em;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  
+}
+/* width */
+.plants-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+/* Track */
+.plants-container::-webkit-scrollbar-track {
+    background: transparent; 
+}
+ 
+/* Handle */
+.plants-container::-webkit-scrollbar-thumb {
+    background: #C3DBA7; 
+}
+
+/* Handle on hover */
+.plants-container::-webkit-scrollbar-thumb:hover {
+    background: #7EB93A; 
+}
+
+.our-services {
+    padding: 0;
+    margin-top: 2em;
+}
+.service-title {
+    display: table;
+    padding: 0;
+    border-bottom: solid 1px black;
+}
+.service-title h4 {
+    font-weight: 400;
+    font-size: 18px;
+}
+.fa-icon-title {
+    font-size: 3em;
+    text-align: right;
+}
+.service-title .coloumn {
+    display: table-cell;
+}
+.col-md-12 ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 16px;
+}
+.service-content {
+    margin-top: 2em;
+}
+.locate-us {
+    padding: 0;
+    margin-top: 2em;
+}
+.details {
+    padding-left: 15px;
+    margin-top: 2em;
+}

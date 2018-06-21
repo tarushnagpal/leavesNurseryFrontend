@@ -1,0 +1,62 @@
+/* 
+
+I will show you how to change a height of a standard Bootstrap navbar.
+
+*/
+
+.navbar {
+    min-height: 80px;    
+    margin-bottom: 0;
+    border-radius: 0;
+    background: white;
+    border: 0;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.navbar .container {
+    margin: 0;
+    padding: 0 3em;
+    width: 100%;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+.navbar-right a {
+    color: black !important;
+}
+@media screen and (max-width: 768px) {
+    .navbar .container {
+        padding: 0 1em;
+    }
+    .navbar {
+        height: 100% !important;
+        min-height: 5px !important;
+    }
+    .navbar-brand {
+        width: 128.666666667px;
+        height: 53.3333333333px;
+    }
+    /* .navbar-brand img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    } */
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 26.5px;
+        padding-bottom: 26.5px;
+        line-height: 27px;
+    }
+}

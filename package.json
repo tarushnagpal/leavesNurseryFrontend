@@ -1,0 +1,21 @@
+{
+  "name": "leaves_nursery_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "google-map-react": "^1.0.4",
+    "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.1",
+    "react-google-maps": "^9.4.5",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

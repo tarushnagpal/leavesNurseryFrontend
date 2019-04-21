@@ -21,7 +21,7 @@ class App extends Component {
 
     componentDidMount() {
 		
-		axios.get("http://localhost:8000/getFeaturedPlants/")
+		axios.get("http://139.59.13.34:8000/getFeaturedPlants/")
 		.then((res) => {
       this.setState({ featuredPlants: res.data.featuredPlants });
 		})

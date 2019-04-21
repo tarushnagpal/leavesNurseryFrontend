@@ -12,7 +12,7 @@ class Plants extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:8000/getPlants/")
+        axios.get("http://139.59.13.34:8000/getPlants/")
 		.then((res) => {
 			this.setState({ plants: res.data });
 		})

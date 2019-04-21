@@ -6,21 +6,31 @@ import Image1 from '../img/jumbotron_image_1.png'
 import Image2 from '../img/jumbotron_image_2.png'
 import Image3 from '../img/jumbotron_image_3.png'
 
-import PlantImage1 from '../img/plant_1.jpg'
-import PlantImage2 from '../img/plant_2.jpg'
-import PlantImage3 from '../img/plant_3.jpg'
-import PlantImage4 from '../img/plant_4.jpg'
-
 import GoogleMapComp from '../components/googleMapComponent'
 import PlantCard from '../components/plantCard'
 import Header from './header'
 import '../css/home.css'
+import axios from 'axios'
 
 class App extends Component {
   
+	constructor(props) {
+		super(props);
+		this.state = { featuredPlants: [] }
+	}
+
+    componentDidMount() {
+		
+		axios.get("http://localhost:8000/getFeaturedPlants/")
+		.then((res) => {
+      this.setState({ featuredPlants: res.data.featuredPlants });
+		})
+
+	}
 
     render() {
-      return (
+		console.log(this.state.featuredPlants);
+      	return (
         <div>
             <Header />
             <div className="home-container col-md-12" >
@@ -30,7 +40,7 @@ class App extends Component {
                   {/* <Carousel.Caption>
                     <h3>First slide label</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                  </Carousel.Caption> */}
+                  </Caro;usel.Caption> */}
                 </Carousel.Item>
                 <Carousel.Item>
                   <img src={Image2} className="caro-img" />
@@ -51,7 +61,7 @@ class App extends Component {
 
                 <div className="col-md-3 left-container ">
                   <div className="about-us col-md-12">
-                    <h4  > About Us </h4>
+                    <h4> About Us </h4>
                     Leaves nursery – a budding concept in Qatar, is enriched by almost 50 years of interaction of our patrons, at various levels in different capacity in Agriculture-Horticulture industry.
                     {/* We have converted the hobbies and interests of many years into a successful business model. The knowledge and experience has been imbibed since childhood by passionate observation and involvement in traditional farming in family farms, nurtured by innate passion for plant life and love for the environment. */}
 
@@ -101,10 +111,13 @@ class App extends Component {
                   </div>
 
                   <div className="plants-container col-md-12">
-                    <PlantCard Image={PlantImage1} title={"Citrus Caviar"} />
-                    <PlantCard Image={PlantImage2} title={"Olive"}/>
-                    <PlantCard Image={PlantImage3} title={"Nyctanthes arbortristis"}/>
-                    <PlantCard Image={PlantImage4} title={"Pyrostegia venusta"}/>
+				  	{ this.state.featuredPlants.map( (v) => { 
+						  return( <PlantCard Image={v.image_url} title={v.indian_name} binomial={v.binomial_name} featured={true} /> )
+					}) }
+					{/* <PlantCard Image={PlantImage1} title={"Citrus Caviar"} />
+					<PlantCard Image={PlantImage2} title={"Olive"}/>
+					<PlantCard Image={PlantImage3} title={"Nyctanthes arbortristis"}/>
+					<PlantCard Image={PlantImage4} title={"Pyrostegia venusta"}/> */}
                     {/* <PlantCard Image={PlantImage} /> */}
                   </div>
 

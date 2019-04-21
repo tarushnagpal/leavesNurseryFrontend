@@ -30,7 +30,7 @@ class App extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem eventKey="2" href="#">
-                  <NavLink to='/student2society'>
+                  <NavLink to='/plants'>
                     Plants
                   </NavLink>
                 </NavItem>

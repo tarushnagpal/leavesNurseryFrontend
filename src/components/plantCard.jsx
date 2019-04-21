@@ -9,12 +9,27 @@ class PlantCard extends Component {
     //     this.state = {  }
     // }
     render() { 
-        return ( 
-            <div className="plantCard-container col-md-3 col-sm-3 col-xs-6" >
-                <img src={ this.props.Image } />
-                <h4> {this.props.title} </h4>
-            </div>
-        )
+        console.log(this.props)
+        if(this.props.featured) 
+            return ( 
+                <div className="col-md-4" >
+                    <div className="plantCard-container">
+                        <img src={ this.props.Image } />
+                        <center> <h4> {this.props.title} </h4> </center>
+                        <center> <h5> {this.props.binomial} </h5> </center>
+                    </div>
+                </div>
+            )
+        else
+            return ( 
+                <div className="col-md-3" >
+                    <div className="plantCard-container">
+                        <img src={ this.props.Image } />
+                        <center> <h4> {this.props.title} </h4> </center>
+                        <center> <h5> {this.props.binomial} </h5> </center>
+                    </div>
+                </div>
+            )
     }
 }
  

@@ -108,7 +108,7 @@ class App extends Component {
 											</div>
 									</div>
 								</div>
-								<div className="col-md-9 right-container ">
+								<div className="col-sm-9 right-container ">
 									<div className="right-title col-md-12">
 										<h4 className="coloumn" >Featured Plants</h4>
 										<div className="fa-icons text-right coloumn">

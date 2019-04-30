@@ -12,7 +12,7 @@ class Plants extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://139.59.13.34:8000/getPlants/")
+        axios.get("http://127.0.0.1:8000/getPlants/")
 		.then((res) => {
 			this.setState({ plants: res.data });
 		})
@@ -20,9 +20,9 @@ class Plants extends Component {
 
     render() { 
         return ( 
-            <div>
-                <Header />
-                <div className="home-container col-md-12" >
+            <div style={{padding:0}}>
+                {/* <Header /> */}
+                <div className="col-md-12" style={{padding: 0}} >
                     
                     { 
                         this.state.plants.map( (v) => {

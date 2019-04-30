@@ -30,15 +30,20 @@ class App extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem eventKey="2" href="#">
-                  <NavLink to='/plants'>
+                  {/* <NavLink to='/plants'>
                     Plants
+                  </NavLink> */}                  
+                  <NavLink to="zz">
+                    <a style={{zIndex: 20}} href="https://www.facebook.com/LeavesNursery/">
+                      Contact Us
+                    </a>
                   </NavLink>
                 </NavItem>
-                <NavItem eventKey="4" href="#">
+                {/* <NavItem eventKey="4" href="#">
                   <NavLink to='/contact'>
                     Contact Us
                   </NavLink>
-                </NavItem>
+                </NavItem> */}
               </Nav>
 
               
